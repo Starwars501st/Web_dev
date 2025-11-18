@@ -5,7 +5,7 @@
     <title>Color Theory</title>
     <meta charset="UTF-8">
     <style>
-        .box {
+        div{
             width: 200px;
             height: 200px;
             border: 3px solid black;
@@ -15,6 +15,20 @@
             font-family: Arial;
             padding-top: 10px;
             box-sizing: border-box;
+            background-color: purple;
+            
+        }
+        #complementary{
+            color: blue
+        }
+        #analogous{
+            color: magenta
+        }
+        #triadic{
+            color: red
+        }
+        #triadic2{
+            color: yellow
         }
     </style>
 
@@ -24,18 +38,15 @@
 
     <h1>Color Theory Boxes</h1>
 
-    <div class="box" style="background-color: blue; color: orange;">
-        Complementary<br>
-        Blue & Orange
+    <div id="complementary">
+     <p>complementary
+     </p>
     </div>
-    <div class="box" style="background-color: yellowgreen; color: green; border-color: yellow;">
-        Analogous<br>
-        Green, Yellow-Green, Yellow
+    <div id="analogous">
+        <p>analogous</p>
     </div>
-    <div class="box" style="background-color: red; color: yellow; border-color: blue;">
-        Triadic<br>
-        Red, Blue, Yellow
-    </div>
-
-</body>
-</html>
+    <div id="triadic">
+       <p>triadic</p>
+        <p><spam id="triadic2">triadic2</spam></p>
+<body>
+<html>
