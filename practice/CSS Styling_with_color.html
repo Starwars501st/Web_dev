@@ -1,26 +1,38 @@
 <!--EB 6th CSS Styling with colors-->
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Styling with Color</title>
-        <style>
-            div{
-                height:150px;
-                width:150px;
-                text-align:center;
-                background-color: lightcoral
-            }
-        </style>
-    </head>
-    <body>
-        <div id="analogous">
-           <p>analogous</p>  
-        </div>
-        <div id="complemetery">
-            <p>complemetery</p>
-        </div>
-        <div id="triadic">
-            <p>triadic</p>
-        </div>
-    </body>
+<html>
+<head>
+    <title>Color Theory</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+            font-family: Arial;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Color Theory Boxes</h1>
+
+    <div class="box" style="background-color: blue; color: orange;">
+        Complementary<br>
+        Blue & Orange
+    </div>
+    <div class="box" style="background-color: yellowgreen; color: green; border-color: yellow;">
+        Analogous<br>
+        Green, Yellow-Green, Yellow
+    </div>
+    <div class="box" style="background-color: red; color: yellow; border-color: blue;">
+        Triadic<br>
+        Red, Blue, Yellow
+    </div>
+
+</body>
+</html>
