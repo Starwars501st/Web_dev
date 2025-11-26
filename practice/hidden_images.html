@@ -3,24 +3,47 @@
 <html>
 <head>
     <title>Doctor Who</title>
+    <style>
+        header {
+            text-align: center;
+        }
+        #hiddenImage {
+            display: none;
+            width: 200px;
+            margin-top: 10px;
+        }
+        #hoverSpot:hover + #hiddenImage {
+            display: block;
+        }
+    </style>
 </head>
-<header style="text-align: center;">
-<img src= https://media.printables.com/media/prints/1167892/images/8798507_f172d428-5d4a-4567-91c5-72f286dc4034_22cd18d6-a0e7-403d-a67f-72542c105177/thumbs/inside/1280x960/jpg/c87d53b8-1369-4a2d-b379-339ab24aff48.webp  alt="Image of The Tardis" height="150px"/>
+<body>
+    <header>
+        <img src="https://media.printables.com/media/prints/1167892/images/8798507_f172d428-5d4a-4567-91c5-72f286dc4034_22cd18d6-a0e7-403d-a67f-72542c105177/thumbs/inside/1280x960/jpg/c87d53b8-1369-4a2d-b379-339ab24aff48.webp" 
+             alt="Image of The TARDIS" 
+             height="150px"/>
 
-    <h1>Doctor Who 2005</h1>
-    <p>Doctor who first aired on BBC TV in the United Kingdom on November 23, 1963</p>
-    <h3>Doctor Who's main/most known Companions</h1>
-</header>
-     <ul>
+        <h1>Doctor Who 2005</h1>
+
+        <p>Doctor Who first aired on BBC TV in the United Kingdom on November 23, 1963. It's about an alien who travels through time and space in a blue police box-shaped ship called the TARDIS. The Doctor can change appearance by regenerating, which is why different actors play the role. With the help of various companions, the Doctor visits new worlds, meets strange creatures, and works to keep the universe safe.</p>
+    </header>
+
+    <h3>Doctor Who's Main/Most Known Companions</h3>
+    <ul>
         <li>Sarah Jane Smith</li>
         <li>Rose Tyler</li>
         <li>Martha Jones</li>
         <li>Donna Noble</li>
         <li>Amy Pond</li>
-        <li>Ruby Sunday</li>
+        <li>Rory Williams</li>
         <li>Clara Oswald</li>
-     </ul>  
-<p> </p>
+    </ul>
+
+    
+        <p>Many of the Doctor's companions become important because they help the Doctor grow and change. Some, like Amy, Rory, and Clara, have stories that connect to the Doctor in big time-travel ways. Others, like Donna and Martha, show how traveling with the Doctor can make someone braver and stronger.</p>
+
+    <p id="hoverSpot" style="color: rgb(14, 14, 129); cursor: pointer;">Hover over this to see some of the Doctors.</p>
+    <img id="hiddenImage" src="https://ichef.bbci.co.uk/images/ic/1200x675/p0gpxrx6.jpg" alt="Doctors Who image">
 
 </body>
 </html>
