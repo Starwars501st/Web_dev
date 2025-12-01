@@ -34,6 +34,22 @@
 main h2, main h3, main p, header {
     grid-column: 1 / 3;
 }
+        #extraContent {
+            display: none;
+            margin-top: 25px;
+            grid-column: 1 / 3;
+        }
+
+        #toggleButton {
+            grid-column: 1 / 3;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #3a7f2e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body> 
@@ -105,9 +121,45 @@ main h2, main h3, main p, header {
         <h3>#7 Echo's of Wisdom</h3>
         <p>Echo's of Wisdom is one of the more resent games releasing in 2024 being the only game where you play as Zelda instead of Link. Being in the same cute artstyle as link's awakening, and not having the player use a sword or shield, but instead having a wand that creates alies to fight for you. </p>
 
+
+        <img id="hoverImg"
+        src="https://i.redd.it/all-all-zelda-games-1986-2024-excluding-spinoffs-cdi-etc-v0-is5xg424zkfe1.jpg?width=1919&format=pjpg&auto=webp&s=9e44d3a30b00eb7e6522bf0011a97fb3499e0db1"
+        alt="Zelda games">
          <img src="https://i.redd.it/t02zf6xyg2q41.jpg" alt="Image of all the Links" height="200px"/>
-        
+         <div id="extraContent">
+         <p>Here are some of the covers for the Zelda games</p>
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPgcursTjbuZgNpddjjPQkYFXj2HyJFUe5nw&s"
+         alt="Legend of Zelda games" />
+</div>
+        <button id="toggleButton">Show More Zelda images</button>
+
     </main>
+
+    <script>
+        const toggleButton = document.getElementById("toggleButton");
+        const extraContent = document.getElementById("extraContent");
+
+        toggleButton.addEventListener("click", function () {
+            if (extraContent.style.display === "none") {
+                extraContent.style.display = "block";
+                toggleButton.textContent = "Hide Image ";
+            } else {
+                extraContent.style.display = "none";
+                toggleButton.textContent = "Show Image";
+            }
+        });
+
+        const hoverImg = document.getElementById("hoverImg");
+
+        hoverImg.addEventListener("mouseover", function () {
+            hoverImg.src = "https://www.watchmojo.com/uploads/thumbs720/VG-RP-Top10-Legend-of-Zelda-Games-480p30.jpg";
+        });
+
+        hoverImg.addEventListener("mouseout", function () {
+            hoverImg.src = "https://i.redd.it/all-all-zelda-games-1986-2024-excluding-spinoffs-cdi-etc-v0-is5xg424zkfe1.jpg?width=1919&format=pjpg&auto=webp&s=9e44d3a30b00eb7e6522bf0011a97fb3499e0db1";
+        });
+    </script>
+
 </body>
 
 </html>
