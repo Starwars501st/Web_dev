@@ -1,39 +1,123 @@
 <!--EB 6th Final Staycation Project-->
 <!DOCTYPE html>
-<html lan="en">
-    <head>
-        <title>Zion National Park</title>
-        <meta charset="UTF-8">
-        <style>
-            body{
-        font-family:'Courier New', Courier, monospace;
-        padding: 15px;
-        margin: 10px;
-        background-color: rgb(224, 164, 108) ;
-        color: white;
+<html lang="en">
 
-            }
-            img{border-radius:10px;max-width: 50% height}
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Zions National Park</h1>
-            <img src= "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/38/81/17/zion-canyon-visitor-center.jpg?w=900&h=500&s=1">
-        </header>
+<head>
+    <title>Zion National Park</title>
+    <meta charset="UTF-8">
 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
 
+    <style>
+        header {
+            text-align: center;
+        }
 
+        body {
+            background-color: #b47b3a; 
+            color: #f2e6d9;
+            font-family: "Pinyon Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+            padding: 20px;
+            margin: auto;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        main h2, 
+        main h3, 
+        main p, 
+        header {
+            grid-column: 1 / 3;
+        }
+
+        #extraContent {
+            display: none;
+            margin-top: 25px;
+            grid-column: 1 / 3;
+        }
+
+        #toggleButton {
+            grid-column: 1 / 3;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #e9cc8e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        ul {
+            line-height: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Zion National Park</h1>
+    </header>
+
+    <main>
+
+        <h2>Why Zion National Park is a Must See Destination</h2>
+        <p>
+            Zion National Park is one of the most visited national parks in the United States,
+            famous for its towering red cliffs and breathtaking views. People travel from 
+            all over the world to hike trails like Angel's Landing and explore narrow canyon 
+            rivers such as The Narrows. Whether you want adventure, photography, or peaceful 
+            scenery, Zion offers an amazing experience for everyone.
+        </p>
+
+        <img src="https://www.craiggoodwinphoto.com/images/640/zion-observation-point-1.jpg" alt="Zion Canyon scenery">
+
+        <h3>Top Reasons to Visit Zion</h3>
+        <ul>
+            <li>World-famous hiking trails</li>
+            <li>Breathtaking red rock views</li>
+            <li>Perfect for photography and sightseeing</li>
+            <li>Great for families, climbers, and adventure seekers</li>
+        </ul>
+
+        <img src="https://www.offthebeatenpath.com/wp-content/uploads/2021/08/entrance-zion-national-park.jpg" alt="Zion front sign">
+
+        <h3>More Amazing Zion Locations</h3>
+        <ul>
+            <li>Angel's Landing</li>
+            <li>The Narrows</li>
+            <li>Emerald Pools</li>
+            <li>Kolob Canyons</li>
+        </ul>
+
+        <img src="https://media.timeout.com/images/106151559/750/562/image.jpg" alt="Zion National Park image ">
+
+        <h3>Hover to See a Different Zion View</h3>
         <img id="hoverImg"
-        src="https://www.nps.gov/zion/learn/nature/images/Big-Bend-11222021.jpg"
-        alt="Zions">
-         <img src="https://zionnationalpark.com/wp-content/uploads/2024/01/zion-national-park-hiking-881-768x512.jpeg" alt="" height="200px"/>
-         <div id="extraContent">
-         <p>Here are some more images or Zions</p>
-         <img src=""
-         alt="Zions National Park" />
-</div>
-        <button id="toggleButton">Show More Images of Zions National Park</button>
+             src="https://images.squarespace-cdn.com/content/v1/5d09463a7ff6500001c3c9ba/1623703936933-BPGKN1KV6YMZB465336T/Zion-10.jpg"
+             alt="Hover Zion Image">
+
+        <h3>Click for an Extra Zion Image</h3>
+
+        <div id="extraContent">
+            <p>Here is a beautiful extra view of Zion Canyon in the Winter time</p>
+            <img src="https://www.worldtribune.org/wp-content/uploads/sites/2/2021/12/Zion_NP_GettyImages-939254684-scaled.jpg" alt="Extra Zion Canyon Image In Winter">
+        </div>
+
+        <button id="toggleButton">Show More</button>
 
     </main>
 
@@ -44,22 +128,23 @@
         toggleButton.addEventListener("click", function () {
             if (extraContent.style.display === "none") {
                 extraContent.style.display = "block";
-                toggleButton.textContent = "Hide Image ";
+                toggleButton.textContent = "Hide";
             } else {
                 extraContent.style.display = "none";
-                toggleButton.textContent = "Show Image";
+                toggleButton.textContent = "Show More";
             }
         });
 
         const hoverImg = document.getElementById("hoverImg");
 
         hoverImg.addEventListener("mouseover", function () {
-            hoverImg.src = "https://media.timeout.com/images/106151559/750/562/image.jpg";
+            hoverImg.src = "https://www.zionponderosa.com/wp-content/uploads/2023/08/Zion-National-Park-Fall-Essentials.jpg";
         });
 
         hoverImg.addEventListener("mouseout", function () {
-            hoverImg.src = "https://images.squarespace-cdn.com/content/v1/564d14dfe4b0290681184a82/1464803431848-RXB663964EW434UMEZ2O/Zion+National+Park+-+034.jpg";
+            hoverImg.src = "https://ctfassets.ksldigital.com/0wjmk6wgfops/01bsMhulyxBatLibRSukhj/d0db55416e77e618505856bf2cecd916/Narrows_Zion_AdobeStock_resize_408228630.jpg?w=1280&h=800&fit=fill&f=center&q=80";
         });
     </script>
 
-    </body>
+</body>
+</html>
